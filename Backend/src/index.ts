@@ -1,11 +1,14 @@
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import * as dotenv from 'dotenv';
 import teacherRoutes from './routes/teacher.route';
 import positionRoutes from './routes/teacherPosition.route';
 
-const MONGO_URI = 'mongodb+srv://vduc31100_db_user:xOnft2rr7RbqFO13@webdevelopment.aecdtt6.mongodb.net/school?retryWrites=true&w=majority';
-const PORT = 3001;
+dotenv.config();
+
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/school'; // Dùng giá trị mặc định nếu không tìm thấy
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
