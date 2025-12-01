@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2020",                             /* Xác định phiên bản ECMAScript mục tiêu cho mã được tạo ra. */
+    "module": "commonjs",                           /* Xác định hệ thống module mục tiêu. CommonJS là tiêu chuẩn cho Node.js/Express. QUAN TRỌNG! */
+    "rootDir": "./src",                             /* Thư mục gốc chứa các file TypeScript. */
+    "outDir": "./dist",                             /* Thư mục để đặt các file JavaScript được biên dịch. */
+    
+    /* Module Resolution Options */
+    "moduleResolution": "node",                     /* Cách thức giải quyết module. 'node' là tiêu chuẩn. */
+    "esModuleInterop": true,                        /* Cho phép import các module CommonJS dưới dạng module ES (import express from 'express'). QUAN TRỌNG! */
+    "resolveJsonModule": true,                      /* Bao gồm các file .json trong các module được import. */
+    
+    /* Strict Type-Checking Options */
+    "strict": true,                                 /* Bật tất cả các tùy chọn kiểm tra kiểu dữ liệu nghiêm ngặt. */
+    
+    /* Emit Options */
+    "sourceMap": true,                              /* Tạo file bản đồ nguồn (source map) cho việc debug. */
+    
+    /* Misc Options */
+    "forceConsistentCasingInFileNames": true,       /* Đảm bảo tên file được tham chiếu nhất quán. */
+    "skipLibCheck": true                            /* Bỏ qua việc kiểm tra kiểu dữ liệu của các file khai báo thư viện (node_modules). */
+  },
+  "include": [
+    "./src/**/*"                                    /* Chỉ biên dịch tất cả các file trong thư mục src/ */
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
